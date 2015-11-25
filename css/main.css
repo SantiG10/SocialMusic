@@ -23,6 +23,12 @@ html {
     line-height: 1.4;
 }
 
+form {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
@@ -335,7 +341,7 @@ h1, h2, h3, h4, h5, h6 {font-weight:normal;margin:0 0 15px;}
 	2)header Start
 ===========================*/
 
-#header{padding: 40px 0px}
+#header{padding: 15px 0px}
 .block-left{}
 
 #header .block-right{}
@@ -360,7 +366,7 @@ h1, h2, h3, h4, h5, h6 {font-weight:normal;margin:0 0 15px;}
 	3) slider Start
 ===========================*/
 
-#slider{background: url(../img/wall.jpg) no-repeat; background-size: cover; background-position: center center; padding-bottom: 255px;padding-top: 180px;}
+#slider{background: url(../img/wall.jpg) no-repeat; background-size: cover; background-position: center center; padding-bottom: 310px;padding-top: 180px;}
 #slider .block{}
 #slider .block h2{color: #fff;font-family: 'Raleway', sans-serif; font-weight: 700; margin:0px; font-size: 36px}
 .slider-text-area{}
@@ -529,10 +535,17 @@ background: #FFFFFF; width: 555px;}
 	9) footer Start
 ===========================*/
 
-#footer{background: #2D312F;text-align: center; padding-top: 75px; padding-bottom: 50px;}
+#footer{background: #2D312F;text-align: center; padding-top: 20px; padding-bottom: 15px;}
 #footer .block{}
 .footer-contant{}
-.footer-contant h3{color:#8C9494; font-size: 24px; font-family: 'Raleway', sans-serif; font-weight: 400;margin: 0px; padding-bottom: 30px;}
+.footer-contant h3{
+    color:#8C9494; 
+    font-size: 24px; 
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 400;
+    margin: 0px; 
+    padding-bottom: 30px
+}
 .social-icon{}
 .social-icon a{margin-right: 10px;}
 .social-icon a i{background: #5d6461;
@@ -542,7 +555,7 @@ font-size: 20px;
 height: 42px;
 padding-top: 11px;
 width: 42px;}
-.support-link{padding-top: 70px;}
+.support-link{padding-top: 25px;}
 .support-link ul{margin:0px; padding: 0px; list-style: none;}
 .support-link ul li{display: inline-block; padding: 0px 10px}
 .support-link ul li a{display: inline-block; color: #8C9494; font-size: 14px}
