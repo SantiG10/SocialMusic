@@ -22,57 +22,63 @@
 	    <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
 	<body>
+		<?php include "../views/encabezado.php"; ?>
 		<div class="container">
     		<div class="row">
         		<div class="span6 offset3">
-            		<form class="form-horizontal" >
+            		<form class="form-horizontal form-registrar" name="f1" action="./registrar2.php" method="post" >
+            			<div class="form-group">
+            				  <label><h2>Registrar</h2></label>
+            			</div>
             			<div class="form-group">
 					    	<label for="inputEmail3">Nombres</label>
-					      	<input type="text" class="form-control" id="inputEmail3" placeholder="Nombres">	
+					      	<input type="text" name="txtNombre" class="form-control" id="inputEmail3" placeholder="Nombres">	
 					  	</div>
 					  	<div class="form-group">
 					    	<label for="inputEmail3">Apellidos</label>
-					      	<input type="text" class="form-control" id="inputEmail3" placeholder="Apellidos">	
+					      	<input type="text" name="txtApellidos" class="form-control" id="inputEmail3" placeholder="Apellidos">	
 					  	</div>
 					  	<div class="form-group">
 					    	<label for="inputEmail3">Correo electrónico</label>
-					      	<input type="email" class="form-control" id="inputEmail3" placeholder="Correo">	
+					      	<input type="email" name="txtEmail" class="form-control" id="inputEmail3" placeholder="Correo">	
 					  	</div>
 					  	<div class="form-group">
-						  	<select class="form-control">
-							  <option>Seleccionar una pregunta</option>
-							  <option>¿Nombre primera mascota?</option>
-							  <option>¿Colegio donde estudió?</option>
-							  <option>¿Día de cumpleaños de tu madre?</option>
+					  		<label for="inputEmail3">Pregunta</label>
+						  	<select class="form-control" name="pregunta">
+							  	<option value="99">Selecionar una pregunta</option>
+								<option value="1">¿Nombre primer mascota?</option>
+								<option value="2">¿Colegio donde estudio?</option>
+								<option value="3">¿Dia del cumpleaños de tu madre?</option>
 							</select>
 						</div>
 						<div class="form-group">
-					      	<input type="text" class="form-control" id="inputEmail3" placeholder="Escribe la respuesta a la pregunta">	
+							<label for="inputEmail3" >Respuesta</label>
+					      	<input type="text" name="txtRespuesta" class="form-control" id="inputEmail3" placeholder="Escribe la respuesta a la pregunta">	
 					  	</div> 
 					  <div class="form-group">
 					  	<label for="inputPassword3">Contraseña</label>
-					    <input type="password" class="form-control" id="inputPassword3" placeholder="Escribe una contraseña, mínimo 8 caracteres">
+					    <input type="password" name="txtClave" class="form-control" id="inputPassword3" placeholder="Escribe una contraseña, mínimo 8 caracteres">
 					  </div>
 					  <div class="form-group">
 					  	<label for="inputPassword3">Confirmación contraseña</label>
-					    <input type="password" class="form-control" id="inputPassword3" placeholder="Repite tu contraseña, mínimo 8 caracteres">
+					    <input type="password" name="txtClave2" class="form-control" id="inputPassword3" placeholder="Repite tu contraseña, mínimo 8 caracteres">
 					  </div>
 					  <div class="form-group">
-					    
-					      <button type="submit" class="btn btn-success btn-block">Registrarse</button>
-
+					      <!-- <button onclick="validar()" class="btn btn-success btn-block">Registrarse</button> -->
+					  	  <input type="button" value="Registrarse" onclick="validar()"/ class="btn btn-success btn-block" >
 					  </div>
 				</form>
         	</div>
     	</div>
 	</div>
-	    <script src="../script/iniciar_sesion.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    	<script src="../js/vendor/jquery.min.js"></script>
-    	<script src="../js/owl.carousel.min.js"></script>
-    	<script src="../js/bootstrap.min.js"></script>
-    	<script src="../js/plugins.js"></script>
-    	<script src="../js/main.js"></script>
+	<?php include './footer.php'; ?>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="../js/vendor/jquery.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/plugins.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="../js/crear_cuenta.js"></script>
 	</body>
 </html>
 

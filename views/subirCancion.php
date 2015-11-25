@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <title>Registrar Usuario</title>
+	    <title>Subir Canción</title>
 	    <meta name="description" content="">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,39 +22,44 @@
 	    <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
 	<body>
-		<?php include "./encabezado.php"; ?>
-		<div class="container">
+	<?php include "../views/encabezado.php"; ?>
+			<div class="container">
     		<div class="row">
         		<div class="span6 offset3">
             		<form class="form-horizontal form-ingresar" name="f1" action="./ingresar2.php" method="post">
             		<div class="form-gruop">
-            			<label><h3>Iniciar</h3></label>
+            			<label><h3>Subir Canción</h3></label>
             		</div>
 					  	<div class="form-group">
-					    	<label for="inputEmail3">Correo electrónico</label>
-					      	<input type="email" name="txtUsuario"class="form-control" id="inputEmail3" placeholder="Correo">	
+					    	<label for="inputEmail3">Nombre canción</label>
+					      	<input type="txt" name="txtUsuario"class="form-control" id="inputEmail3" placeholder="Canción">	
 					  	</div>
-					  	
 					  <div class="form-group">
-					  	<label for="inputPassword3">Contraseña</label>
-					    <input type="password" name="txtClave" class="form-control" id="inputPassword3" placeholder="Escribe una contraseña">
+					  	<label for="inputPassword3">Archivo</label>
+					    <input name="archivo" type="file" size="35" />
+					  </div>
+					  <div class="form-group">
+					    	<label for="inputEmail3">Comentario</label>
+					    	<textarea class="form-control" rows="3" placeholder="Escribe comentarios"></textarea>
+					      	<!-- <input type="textarea" name="txtUsuario"class="form-control" id="inputEmail3" placeholder="Escribe comentarios">	 -->
 					  </div>
 					  <div class="form-group">
 					      <!-- <button type="submit" class="btn btn-success btn-block">Inciar sesión</button> -->
-					      <input type="button" value="Iniciar" onclick="validar()"/ class="btn btn-success btn-block" >
+					      <input type="button" value="Subir" onclick="validar()"/ class="btn btn-success btn-block" >
 					  </div>
 				</form>
         	</div>
     	</div>
 	</div>
+
+
 	<?php include './footer.php'; ?>
-	 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="../js/iniciar_sesion.js"></script>
-<script src="../js/vendor/jquery.min.js"></script>
-<script src="../js/owl.carousel.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/plugins.js"></script>
-<script src="../js/main.js"></script>
+	<script src="../js/vendor/jquery.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/plugins.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="../js/crear_cuenta.js"></script>
 	</body>
 </html>

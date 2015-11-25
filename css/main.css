@@ -23,10 +23,17 @@ html {
     line-height: 1.4;
 }
 
-form {
+.form-ingresar {
     width: 300px;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.form-registrar {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 35px;
 }
 
 /*
@@ -103,22 +110,6 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -141,6 +132,8 @@ textarea {
     width: 0;
     height: 150%;
 }
+
+
 
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
@@ -341,7 +334,7 @@ h1, h2, h3, h4, h5, h6 {font-weight:normal;margin:0 0 15px;}
 	2)header Start
 ===========================*/
 
-#header{padding: 15px 0px}
+#header{ margin-bottom: -20px; padding: 15px 0px; background-color: #000; color: white;}
 .block-left{}
 
 #header .block-right{}
@@ -353,7 +346,8 @@ h1, h2, h3, h4, h5, h6 {font-weight:normal;margin:0 0 15px;}
 
 .nav-logo{margin-right: 30px; margin-top: 12px}
 .navbar-default{background: none; border: none;}
-.navbar-default .navbar-nav > li > a{ color:#8B9090;font-family: 'Raleway', sans-serif; font-weight: 400px; font-size: 14px;}
+.navbar-default .navbar-nav > li > a{ color:white;font-family: 'Raleway', sans-serif; font-weight: 400px; font-size: 16px;}
+.navbar-default .navbar-nav > li > a:hover { color: red;}
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{background: none; color:#3C3D42}
 
 
@@ -535,7 +529,7 @@ background: #FFFFFF; width: 555px;}
 	9) footer Start
 ===========================*/
 
-#footer{background: #2D312F;text-align: center; padding-top: 20px; padding-bottom: 15px;}
+#footer{background: #2D312F;text-align: center; padding-top: 30px; padding-bottom: 15px; margin-top: 0px;}
 #footer .block{}
 .footer-contant{}
 .footer-contant h3{
@@ -581,9 +575,3 @@ width: 42px;}
 .edit-tab-content{padding-top: 30px}
 .teb-icon-edit{ height: 170px;width: 170px; margin: 0 auto; color:#5DCA88;}
 .teb-icon-edit i{font-size: 170px}
-
-
-
-
-
-
