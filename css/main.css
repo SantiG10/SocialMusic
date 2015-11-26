@@ -26,14 +26,38 @@ html {
 .form-ingresar {
     width: 300px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 40px;
     margin-bottom: 100px;
+}
+
+.form-subirCancion {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: -10px;
+    margin-bottom: 100px; 
+}
+
+.centrado {
+  /*background-color: #fafafa;*/
+/*  margin: 1rem;
+  padding: 1rem;*/
+  /*border: 2px solid #ccc;*/
+  /* IMPORTANTE */
+  text-align: center;
+}
+
+
+.centrado2{
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
 }
 
 .form-registrar {
     width: 300px;
     margin: 0 auto;
-    margin-top: 35px;
+    margin-top: 40px;
+    margin-bottom: 50px;
 }
 
 /*
@@ -334,7 +358,7 @@ h1, h2, h3, h4, h5, h6 {font-weight:normal;margin:0 0 15px;}
 	2)header Start
 ===========================*/
 
-#header{ margin-bottom: -20px; padding: 15px 0px; background-color: #000; color: white;}
+#header{ margin-bottom: -20px; padding: 0px 0px; background-color: #2D312F; color: white;}
 .block-left{}
 
 #header .block-right{}
@@ -360,7 +384,7 @@ h1, h2, h3, h4, h5, h6 {font-weight:normal;margin:0 0 15px;}
 	3) slider Start
 ===========================*/
 
-#slider{background: url(../img/wall.jpg) no-repeat; background-size: cover; background-position: center center; padding-bottom: 310px;padding-top: 180px;}
+#slider{background: url(../img/wall.jpg) no-repeat; background-size: cover; background-position: forfro center; padding-bottom: 310px;padding-top: 180px;}
 #slider .block{}
 #slider .block h2{color: #fff;font-family: 'Raleway', sans-serif; font-weight: 700; margin:0px; font-size: 36px}
 .slider-text-area{}
@@ -529,7 +553,7 @@ background: #FFFFFF; width: 555px;}
 	9) footer Start
 ===========================*/
 
-#footer{background: #2D312F;text-align: center; padding-top: 30px; padding-bottom: 15px; margin-top: 0px;}
+#footer{background: #2D312F;text-align: center; padding-top: 30px; }
 #footer .block{}
 .footer-contant{}
 .footer-contant h3{

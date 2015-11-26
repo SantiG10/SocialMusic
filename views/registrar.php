@@ -27,7 +27,7 @@
     		<div class="row">
         		<div class="span6 offset3">
             		<form class="form-horizontal form-registrar" name="f1" action="./registrar2.php" method="post" >
-            			<div class="form-group">
+            			<div class="centrado">
             				  <label><h2>Registrar</h2></label>
             			</div>
             			<div class="form-group">

@@ -26,33 +26,34 @@
 			<div class="container">
     		<div class="row">
         		<div class="span6 offset3">
-            		<form class="form-horizontal form-ingresar" name="f1" action="./ingresar2.php" method="post">
-            		<div class="form-gruop">
+            		<form class="form-horizontal form-subirCancion" name="f1" action="./subirCancion2.php" method="post" enctype="multipart/form-data">
+            		<div class="centrado">
             			<label><h3>Subir Canción</h3></label>
             		</div>
 					  	<div class="form-group">
 					    	<label for="inputEmail3">Nombre canción</label>
-					      	<input type="txt" name="txtUsuario"class="form-control" id="inputEmail3" placeholder="Canción">	
+					      	<input type="txt" name="txtNombre" class="form-control" id="inputEmail3" placeholder="Canción">	
 					  	</div>
 					  <div class="form-group">
 					  	<label for="inputPassword3">Archivo</label>
 					    <input name="archivo" type="file" size="35" />
 					  </div>
 					  <div class="form-group">
-					    	<label for="inputEmail3">Comentario</label>
-					    	<textarea class="form-control" rows="3" placeholder="Escribe comentarios"></textarea>
+					  	<input name="action" type="hidden" value="upload" /> 
+					  </div>
+					  <div class="form-group">
+					    	<label for="inputEmail3">Comentarios</label>
+					    	<textarea class="form-control" rows="3" placeholder="Escribe comentarios" name="txtComentario"></textarea>
 					      	<!-- <input type="textarea" name="txtUsuario"class="form-control" id="inputEmail3" placeholder="Escribe comentarios">	 -->
 					  </div>
 					  <div class="form-group">
 					      <!-- <button type="submit" class="btn btn-success btn-block">Inciar sesión</button> -->
-					      <input type="button" value="Subir" onclick="validar()"/ class="btn btn-success btn-block" >
+					      <input type="submit" value="Subir" onclick="validar()"/ class="btn btn-success btn-block" >
 					  </div>
 				</form>
         	</div>
     	</div>
 	</div>
-
-
 	<?php include './footer.php'; ?>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="../js/vendor/jquery.min.js"></script>
@@ -60,6 +61,6 @@
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/plugins.js"></script>
 	<script src="../js/main.js"></script>
-	<script src="../js/crear_cuenta.js"></script>
+	<script src="../js/subirCancion.js"></script>
 	</body>
 </html>

@@ -29,7 +29,7 @@
                     <div class="block">
                         <div class="slider-text-area">
                             <div class="slider-text">
-                                <h2>La red social de musica que esperabas<br></h2> 
+                                
                             </div>
                         </div>
                     </div>

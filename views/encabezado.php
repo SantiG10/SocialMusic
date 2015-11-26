@@ -23,13 +23,15 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                               <ul class="nav navbar-nav">
-                                <li><a href="http://localhost:8888/SocialMusic/index.php">Home <span class="sr-only">(current)</span></a></li>
-                                 <?php if(isset($_SESSION['usuario'])) { ?>
-                                 <li><a href="http://localhost:8888/SocialMusic/views/subirCancion.php">Subir canción</a></li>
-                                <li><a href="http://localhost:8888/SocialMusic/views/cerrar_sesion.php">Cerrar Sesión</a></li>
+                                <!-- <li><a href="http://localhost:8888/SocialMusic/index.php">Home <span class="sr-only">(current)</span></a></li> -->
+                                <?php if(isset($_SESSION['usuario'])) { ?>
+                                  <li><a href="http://localhost:8888/SocialMusic/views/inicioUsuario.php">Home<span class="sr-only">(current)</span></a></li>
+                                  <li><a href="http://localhost:8888/SocialMusic/views/subirCancion.php">Subir canción</a></li>
+                                  <li><a href="http://localhost:8888/SocialMusic/views/cerrar_sesion.php">Cerrar Sesión</a></li>
                                 <?php } else { ?>
-                                <li><a href="http://localhost:8888/SocialMusic/views/ingresar.php">Iniciar</a></li>
-                                <li><a href="http://localhost:8888/SocialMusic/views/registrar.php">Registrar</a></li>
+                                  <li><a href="http://localhost:8888/SocialMusic/index.php">Home<span class="sr-only">(current)</span></a></li>
+                                  <li><a href="http://localhost:8888/SocialMusic/views/ingresar.php">Iniciar</a></li>
+                                  <li><a href="http://localhost:8888/SocialMusic/views/registrar.php">Registrar</a></li>
                                 <?php } ?>
                               </ul>
                             </div><!-- /.navbar-collapse -->

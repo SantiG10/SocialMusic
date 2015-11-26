@@ -5,18 +5,21 @@ create database if not exists SocialMusic;
 use SocialMusic;
 
 create table usuarios(
-user varchar(15) primary key,
-nombre varchar(15) not null,
-apellido varchar(15) not null,
+user varchar(30) primary key,
+nombre varchar(30) not null,
+apellido varchar(40) not null,
 password varchar(20) not null,
-pregunta varchar(20) not null,
+pregunta varchar(1) not null,
 respuesta varchar(20) not null,
 estado varchar(3) not null);
 
 create table musica(
-id int(3) primary key,
-usuario varchar(15) not null,
+id int auto_increment primary key,
+usuario varchar(30) not null,
+nombre varchar(30) not null,
 direccion varchar(50) not null,
+estado varchar(3) not null,
+descripcion varchar(250),
 foreign key(usuario) references usuarios(user));
 
 
