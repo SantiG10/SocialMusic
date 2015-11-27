@@ -38,10 +38,6 @@
 				<?php		
 					$r   = mysql_query($sql,$cnx);
 					$nf  = mysql_num_rows($r);
-
-					
-
-					
 					if($nf > 0) { 
 				?>
 				<div class="jumbotron" style="margin: 50px 0px 40px 0px; padding-bottom: 150px;">
@@ -77,16 +73,10 @@
 									</td>
 									<td align="center">
 										<img class="elim" src="../img/eliminar.png" width="40" height="40" BORDER=2 VSPACE=3 HSPACE=3 ALT="eliminar" value=<?php echo "'".$fila['direccion']."'" ?>>
-									<!-- 	<a href=<?php echo "http://localhost:8888/SocialMusic/views/eliminarCancion.php?d=".$fila['direccion'] ?> role="button">
-											
-										</a> -->
-										
 									</td>
 								</tr>
 				<?php
-
 						}
-
 				?>
 						</table>
 					</div>
