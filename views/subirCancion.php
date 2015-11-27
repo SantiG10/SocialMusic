@@ -23,7 +23,7 @@
 	</head>
 	<body>
 	<?php include "../views/encabezado.php"; ?>
-			<div class="container">
+			<div class="container" style="padding-top: 40px;">
     		<div class="row">
         		<div class="span6 offset3">
             		<form class="form-horizontal form-subirCancion" name="f1" action="./subirCancion2.php" method="post" enctype="multipart/form-data">
@@ -48,7 +48,7 @@
 					  </div>
 					  <div class="form-group">
 					      <!-- <button type="submit" class="btn btn-success btn-block">Inciar sesión</button> -->
-					      <input type="submit" value="Subir" onclick="validar()"/ class="btn btn-success btn-block" >
+					      <input type="button" value="Subir" onclick="validar()"/ class="btn btn-success btn-block" >
 					  </div>
 				</form>
         	</div>

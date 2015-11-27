@@ -15,7 +15,7 @@ if ($_POST["action"] == "upload") {
     $nombre = $_POST['txtNombre'];
     $comentario = $_POST['txtComentario'];
     $usuario = $_SESSION['usuario'];
-    $destino =  "../files/".$prefijo."_".$nombre.".mp3";
+    $destino =  "../files/".$prefijo."_". str_replace(" ","",$nombre) .".mp3";
     $sql = "insert into musica (`usuario`, `nombre`, `direccion`, `estado`,
         `descripcion`)
         values('$usuario','$nombre','$destino','ON','$comentario')";  

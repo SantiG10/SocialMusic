@@ -23,7 +23,7 @@
 	</head>
 	<body>
 		<?php include "./encabezado.php"; ?>
-		<div class="container">
+		<div class="container" style="padding-top: 30px;">
     		<div class="row">
         		<div class="span6 offset3">
             		<form class="form-horizontal form-ingresar" name="f1" action="./recuperarContrasena2.php" method="post">

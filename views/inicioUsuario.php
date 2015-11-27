@@ -3,7 +3,7 @@
 	session_start();
 	$usuario = $_SESSION['usuario'];
 	$cnx  = conexion::conectar();
-	$sql = "select direccion from musica where usuario = '".$usuario."' and estado = 'ON'";
+	$sql = "select nombre, direccion, descripcion from musica where usuario = '".$usuario."' and estado = 'ON'";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,21 +28,81 @@
 	    <link rel="stylesheet" href="../css/main.css">
 	    <link rel="stylesheet" href="../css/responsive.css">
 	    <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+	    
 	</head>
 	<body>
 	<?php include "../views/encabezado.php"; ?>
-		<div class="container inicioUsuario">
-			<div class="center-block ">
+		<div class="container">
+			<div class="center-block">
 				<div class="span6 offset3">
-					<div class="centrado2">
-						<h1>Inicio Usuario</h1>
-					</div>
+				<?php		
+					$r   = mysql_query($sql,$cnx);
+					$nf  = mysql_num_rows($r);
 
-					<div class="centrado2">
-						<audio controls>
-							<source src="../files/60aa44_loveMe.mp3" type="audio/mp3" />
-						</audio>
-					</div>	
+					
+
+					
+					if($nf > 0) { 
+				?>
+				<div class="jumbotron" style="margin: 50px 0px 40px 0px; padding-bottom: 150px;">
+					<div class="table-responsive">
+						<table class="table">
+							<tr class="success">
+								<th>Nombre</th>
+								<th>Canción</th>
+								<th>Comentarios</th>
+								<th>Eliminar</th>
+							</tr>	
+				<?php
+						$opc = "info";
+						while($fila = mysql_fetch_assoc($r)){
+							if($opc == "info"){
+								$opc = "active";
+							}else{
+								$opc = "info";
+							}
+				?>
+							
+								<tr class='<?php echo $opc ?>'>
+									<td>
+										<?php echo $fila['nombre']; ?>
+									</td>
+									<td>
+										<audio controls>
+											<source src=<?php echo $fila['direccion']; ?> type="audio/mp3" />
+										</audio>
+									</td>
+									<td>
+										<?php echo $fila['descripcion']; ?>
+									</td>
+									<td align="center">
+										<img class="elim" src="../img/eliminar.png" width="40" height="40" BORDER=2 VSPACE=3 HSPACE=3 ALT="eliminar" value=<?php echo "'".$fila['direccion']."'" ?>>
+									<!-- 	<a href=<?php echo "http://localhost:8888/SocialMusic/views/eliminarCancion.php?d=".$fila['direccion'] ?> role="button">
+											
+										</a> -->
+										
+									</td>
+								</tr>
+				<?php
+
+						}
+
+				?>
+						</table>
+					</div>
+				</div>
+				<?php } else { ?>
+					<div class="jumbotron" style="margin: 40px 0px 60px 0px;">
+						<div class="container">
+							<h1> Hola, bienvenido a SocialMusic </h1>
+							<p> Este es tu inicio, acá podrás escuchas tus canciones</p>
+							<p> En el momento no tienes canciones disponibles </p>
+							<p>
+								<a class="btn btn-primary btn-lg" href="http://localhost:8888/SocialMusic/views/subirCancion.php" role="button">Agrega una canción »</a>
+							</p>
+						</div>
+					</div>
+				<?php } mysql_close($cnx); ?> 
 				</div>
 			</div>
 		</div>			
@@ -54,6 +114,16 @@
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/plugins.js"></script>
 	<script src="../js/main.js"></script>
+	<script >
+			$(document).ready(function(){
+				$(".elim").click(function(){
+					if(confirm("¿Esta seguro de eliminar esta canción?")){
+						var dir = "./eliminarCancion.php?d=" + $(this).attr('value');
+						window.location.href=dir;
+					}
+				});
+			});
+	</script>
 	 <!-- <script src="../js/bootstrap3_player.js"></script> -->
 	</body>
 </html>

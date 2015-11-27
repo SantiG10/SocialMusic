@@ -23,7 +23,7 @@
 	</head>
 	<body>
 		<?php include "./encabezado.php"; ?>
-		<div class="container">
+		<div class="container" style="padding-top: 40px;">
     		<div class="row">
         		<div class="span6 offset3">
             		<form class="form-horizontal form-ingresar" name="f1" action="./ingresar2.php" method="post">
@@ -44,7 +44,7 @@
 					  </div>
 					  <div class="form-group">
 					      <!-- <button type="submit" class="btn btn-success btn-block">Inciar sesión</button> -->
-					      <input type="submit" value="Iniciar" onclick="validar()"/ class="btn btn-success btn-block" >
+					      <input type="button" value="Iniciar" onclick="validar()"/ class="btn btn-success btn-block" >
 					  </div>
 				</form>
         	</div>

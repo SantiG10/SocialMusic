@@ -25,7 +25,7 @@
 	</head>
 	<body>
 		<?php include "./encabezado.php"; ?>
-		<div class="container">
+		<div class="container" style="padding-top:40px;">
     		<div class="row">
         		<div class="span6 offset3">
 		            	<form class="form-horizontal form-ingresar" name="f1" action="<?php echo './cambiarClave2.php?usuario='.$U; ?>" method="post">
